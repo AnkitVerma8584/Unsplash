@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ankit Verma</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="home_fragment_label">First Fragment</string>
+    <string name="feeds_fragment_label">Feeds</string>
+    <string name="image_fragment_label">Upload Image</string>
+
+</resources>

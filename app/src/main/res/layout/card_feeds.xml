@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="14dp"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/user_image_view"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:round="10dp"
+        tools:src="@android:drawable/btn_star" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/user_name_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingHorizontal="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_image_view"
+        app:layout_constraintTop_toTopOf="@+id/user_image_view"
+        tools:text="The Verge" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/user_instagram_name_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingHorizontal="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_image_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/user_name_text_view"
+        tools:text="The Verge" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/feed_description_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_instagram_name_text_view"
+        tools:text="Lorem Ipsjum sonor dis foaeinfi nofnae" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/feed_image_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feed_description_text_view"
+        app:round="20dp"
+        tools:src="@drawable/home_header" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/feed_comments_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feed_image_imageview"
+        tools:text="View all 9 comments" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/feed_action_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:constraint_referenced_ids="action_like_textview,action_comment_textview,action_share_textview"
+        app:flow_horizontalStyle="spread_inside"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feed_comments_text_view" />
+
+    <TextView
+        android:id="@+id/action_like_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        app:drawableStartCompat="@drawable/ic_like"
+        tools:text="21 likes" />
+
+    <TextView
+        android:id="@+id/action_comment_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        app:drawableStartCompat="@drawable/ic_comment"
+        tools:text="5 comments" />
+
+    <TextView
+        android:id="@+id/action_share_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:text="Share"
+        app:drawableStartCompat="@drawable/ic_share" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
